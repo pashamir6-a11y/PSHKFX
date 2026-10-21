@@ -1,0 +1,272 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>PASHAAAAFX</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Share+Tech+Mono&family=Onest:wght@400;500&display=swap">
+<style>
+/* Layout: black VHS-tape wall. Hero with looping video and cut-out collage, a ticker, the clip wall, a sheet of cut-out assets, and a contact block with all socials. */
+:root{
+  --bg:#07060b;
+  --panel:#100e18;
+  --fg:#efeaff;
+  --mute:#8f89ad;
+  --line:#2a2540;
+  --mag:#ff2bd6;
+  --cyan:#19f0e0;
+  --acid:#c6ff1a;
+  --display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --body:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Share Tech Mono',ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 16px/1.55 var(--body);margin:0;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1280px;margin-inline:auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
+  background:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0 2px,rgba(0,0,0,.22) 2px 3px);mix-blend-mode:multiply}
+
+.bar{position:absolute;top:0;left:0;right:0;z-index:5;padding-block:18px}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.rec{font:400 15px var(--mono);letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.rec i{width:10px;height:10px;border-radius:50%;background:#ff2a2a;display:block;animation:blink 1.2s steps(2,start) infinite}
+@keyframes blink{50%{opacity:0}}
+.tc{font:400 15px var(--mono);color:var(--mute);letter-spacing:.1em}
+
+/* hero */
+.hero{position:relative;min-height:min(90svh,860px);display:flex;align-items:flex-end;overflow:hidden}
+.hero>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.3) contrast(1.1) brightness(.5)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,var(--bg) 3%,rgba(7,6,11,0) 55%)}
+.cut{position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 0 22px rgba(0,0,0,.7))}
+.cut.hood{right:max(2vw,env(safe-area-inset-right,0px));bottom:0;height:min(84%,720px);width:auto}
+.cut.devil{right:min(26vw,380px);top:14%;height:min(46%,380px);width:auto;animation:float 7s ease-in-out infinite}
+.cut.frank{left:52%;bottom:0;height:min(30%,230px);width:auto;transform:rotate(-6deg)}
+@keyframes float{50%{transform:translateY(-14px) rotate(2deg)}}
+.hero .wrap{position:relative;z-index:3;padding-block:120px 44px;width:100%}
+h1{font:900 clamp(56px,13.5vw,196px)/.82 var(--display);letter-spacing:-.01em;margin:0;text-transform:uppercase;
+  text-shadow:-.04em 0 0 var(--mag),.04em 0 0 var(--cyan);overflow-wrap:anywhere}
+.hero p{max-width:34ch;font-size:clamp(17px,2.2vw,22px);margin:24px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font:400 17px var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+  padding:14px 22px;background:var(--acid);color:#10130a;border:0;cursor:pointer;min-height:48px}
+.btn:hover{background:#fff}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--fg)}
+.btn.ghost:hover{background:var(--fg);color:var(--bg)}
+
+/* ticker */
+.ticker{border-block:1px solid var(--line);overflow:hidden;background:var(--panel);position:relative}
+.ticker .track{display:flex;align-items:center;gap:36px;width:max-content;padding-block:6px;animation:slide 38s linear infinite}
+.ticker span{font:800 28px/1 var(--display);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.ticker span.o{color:transparent;-webkit-text-stroke:1px var(--fg)}
+.ticker img{height:64px;width:auto;filter:invert(1)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* wall */
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding-block:56px 22px}
+h2{font:900 clamp(34px,6vw,64px)/.9 var(--display);text-transform:uppercase;margin:0}
+.sec-head span{font:400 15px var(--mono);color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
+.wall{columns:3 340px;column-gap:14px}
+.clip{display:block;width:100%;margin:0 0 14px;padding:0;border:0;background:var(--panel);position:relative;cursor:pointer;break-inside:avoid;color:inherit;text-align:left;overflow:hidden}
+.clip .frame{display:block;width:100%;position:relative;background:#000}
+.clip video{display:block;width:100%;height:100%;object-fit:cover;transition:filter .2s}
+.clip:hover video{filter:saturate(1.4) contrast(1.1)}
+.clip:hover .frame{box-shadow:inset 0 0 0 2px var(--mag)}
+.meta{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding:34px 12px 10px;
+  background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,0));font:400 15px var(--mono);letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
+.meta b{font-weight:400;overflow-wrap:anywhere}
+.meta em{font-style:normal;color:var(--cyan);flex:none}
+.hint{position:absolute;top:10px;right:10px;font:400 13px var(--mono);letter-spacing:.1em;background:var(--acid);color:#10130a;padding:3px 8px;opacity:0;transition:opacity .15s;pointer-events:none;text-transform:uppercase}
+.clip:hover .hint,.clip:focus-visible .hint{opacity:1}
+
+/* offer */
+.offer{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.offer>div{padding:26px 22px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.offer h3{font:800 30px/1 var(--display);text-transform:uppercase;margin:0 0 10px;color:var(--cyan)}
+.offer p{margin:0;max-width:34ch}
+.offer small{display:block;margin-top:14px;font:400 14px var(--mono);color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+
+/* contact */
+.contact{margin-top:72px;border-top:1px solid var(--line);padding-block:56px 72px;position:relative;overflow:hidden}
+.contact>*{position:relative;z-index:1}
+.contact .devil{position:absolute;z-index:0;right:-2%;bottom:0;height:min(100%,520px);width:auto;pointer-events:none}
+.contact .tg{font:900 clamp(40px,10vw,128px)/.9 var(--display);text-transform:uppercase;text-decoration:none;display:inline-block;overflow-wrap:anywhere;
+  text-shadow:-.03em 0 0 var(--mag),.03em 0 0 var(--cyan)}
+.contact .tg:hover{color:var(--acid)}
+.contact p{color:var(--mute);margin:16px 0 0;max-width:46ch}
+.socials{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,260px));gap:12px;margin-top:32px}
+.soc{display:flex;flex-direction:column;gap:4px;text-decoration:none;padding:14px 16px;border:1px solid var(--line);background:rgba(16,14,24,.85);min-width:0}
+.soc small{font:400 13px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}
+.soc b{font:800 24px/1.05 var(--display);text-transform:uppercase;overflow-wrap:anywhere}
+.soc:hover{border-color:var(--acid)}
+.soc:hover b{color:var(--acid)}
+.toast{font:400 15px var(--mono);color:var(--acid);min-height:1.5em}
+footer{padding-block:20px 40px;font:400 14px var(--mono);color:var(--mute);letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* player */
+dialog{border:0;padding:0;background:#000;color:var(--fg);max-width:min(1100px,94vw);width:100%;max-height:92svh;overflow:auto}
+dialog::backdrop{background:rgba(3,2,8,.9)}
+dialog video,dialog img{display:block;width:100%;max-height:70svh;background:#000;object-fit:contain}
+dialog img{background:radial-gradient(120% 90% at 50% 100%,#1c1530 0,#0b0914 70%);padding:16px}
+.dbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+.dbar strong{font:800 28px/1 var(--display);text-transform:uppercase;overflow-wrap:anywhere}
+.dbar div{display:flex;gap:10px;flex-wrap:wrap}
+
+@media (max-width:760px){
+  .wall{columns:1}
+  .tc{display:none}
+  .cut.hood{height:56%;right:-6vw}
+  .cut.devil{height:26%;right:auto;left:62%;top:12%}
+  .cut.frank{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  h1{animation:tear 6s steps(1) infinite}
+  @keyframes tear{0%,92%,100%{text-shadow:-.04em 0 0 var(--mag),.04em 0 0 var(--cyan);transform:none}
+    93%{text-shadow:-.09em 0 0 var(--mag),.07em 0 0 var(--cyan);transform:translateX(.02em) skewX(-4deg)}
+    95%{text-shadow:.06em 0 0 var(--mag),-.08em 0 0 var(--cyan);transform:translateX(-.03em)}}
+}
+@media (prefers-reduced-motion:reduce){.rec i,.ticker .track,.cut.devil{animation:none}}
+</style>
+
+<header class="bar"><div class="wrap">
+  <div class="rec"><i></i>REC · PASHAAAAFX</div>
+  <div class="tc" id="tc">00:00:00:00</div>
+</div></header>
+
+<section class="hero">
+  <video id="heroVid" muted loop playsinline autoplay preload="auto" poster="p/allluv33.jpg" src="v/allluv33.mp4"></video>
+  <img class="cut devil" src="i/devil.webp" alt="" width="800" height="1022">
+  <img class="cut frank" src="i/frank.webp" alt="" width="800" height="710">
+  <img class="cut hood" src="i/hood.webp" alt="" width="700" height="1280">
+  <div class="wrap">
+    <h1>PASHAAAAFX</h1>
+    <p>Glitchy VHS videos and visuals. Watch the work, then message me if you want something like it.</p>
+    <div class="cta">
+      <a class="btn" href="https://t.me/pashaaaafx" target="_blank" rel="noopener">Buy on Telegram</a>
+      <a class="btn ghost" href="#wall">Watch the work</a>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<main class="wrap">
+  <div class="sec-head" id="wall">
+    <h2>Showcase</h2>
+    <span id="count">11 videos · tap to open</span>
+  </div>
+  <div class="wall" id="grid"></div>
+
+  <div class="sec-head"><h2>What you can buy</h2><span>pricing on request</span></div>
+  <div class="offer">
+    <div><h3>Ready-made videos</h3><p>Any clip from the showcase. Pick one, send me its name, and I send you the source file.</p><small>source files up to 1920 px</small></div>
+    <div><h3>Loops and footage</h3><p>Short looping pieces for your edits, music videos and stories, in the same glitch style.</p><small>2 to 15 seconds</small></div>
+    <div><h3>Custom visuals</h3><p>I can make a video or cover for your track, project or brand. Describe the idea and I will tell you what is possible.</p><small>timing agreed in chat</small></div>
+  </div>
+
+  <section class="contact" id="buy">
+    <img class="devil" src="i/devil.webp" alt="" width="800" height="1022">
+    <h2>Message me</h2>
+    <p style="margin-bottom:10px">Telegram is the fastest way. Send the name of the clip or describe what you need.</p>
+    <a class="tg" href="https://t.me/pashaaaafx" target="_blank" rel="noopener">@pashaaaafx</a>
+    <div class="cta"><button class="btn ghost" id="copy" type="button">Copy username</button><span class="toast" id="toast" role="status"></span></div>
+    <div class="socials">
+      <a class="soc" href="https://www.instagram.com/pashokepta/" target="_blank" rel="noopener"><small>Instagram</small><b>@pashokepta</b></a>
+      <a class="soc" href="https://www.tiktok.com/@pshkept" target="_blank" rel="noopener"><small>TikTok</small><b>@pshkept</b></a>
+      <a class="soc" href="https://boosty.to/pashokeptaaa/donate" target="_blank" rel="noopener"><small>Boosty</small><b>Support me</b></a>
+    </div>
+  </section>
+  <footer><span>PASHAAAAFX</span><span>VHS / GLITCH / VISUAL</span></footer>
+</main>
+
+<dialog id="dlg" aria-label="Viewer">
+  <video id="dvid" loop playsinline controls hidden></video>
+  <img id="dimg" alt="" hidden>
+  <div class="dbar">
+    <strong id="dname"></strong>
+    <div>
+      <a class="btn" id="dbuy" href="https://t.me/pashaaaafx" target="_blank" rel="noopener">Buy this</a>
+      <button class="btn ghost" id="dclose" type="button">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var clips=[
+    {id:'btchs',n:'BTCHS',w:1280,h:1026,d:'0:16'},
+    {id:'seals',n:'SEALS',w:1280,h:854,d:'0:13'},
+    {id:'allluv33',n:'ALLLUV33',w:1280,h:854,d:'0:11'},
+    {id:'induz',n:'INDUZ',w:1280,h:720,d:'0:07'},
+    {id:'cheert',n:'CHEERT',w:1280,h:1026,d:'0:03'},
+    {id:'hellraicer',n:'HELLRAICER',w:1280,h:854,d:'0:08'},
+    {id:'untitled',n:'UNTITLED',w:1280,h:1026,d:'0:11'},
+    {id:'suka2',n:'SUKA2',w:1280,h:720,d:'0:08'},
+    {id:'daily3notmaked',n:'DAILY3 NOTMAKED',w:1280,h:854,d:'0:03'},
+    {id:'luvoli',n:'LUVOLI',w:1280,h:854,d:'0:08'},
+    {id:'baykersuka',n:'BAYKERSUKA',w:1280,h:854,d:'0:02'}
+  ];
+  var grid=document.getElementById('grid');
+  document.getElementById('count').textContent=clips.length+' videos · tap to open';
+
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var v=e.target.querySelector('video');
+      if(e.isIntersecting){
+        if(!v.getAttribute('src')) v.src=v.dataset.src;
+        var p=v.play(); if(p&&p.catch)p.catch(function(){});
+      }else{ v.pause(); }
+    });
+  },{rootMargin:'120px 0px',threshold:.15}):null;
+
+  clips.forEach(function(c){
+    var b=document.createElement('button');
+    b.className='clip';b.type='button';b.setAttribute('aria-label','Open '+c.n);
+    b.innerHTML='<span class="frame" style="aspect-ratio:'+c.w+'/'+c.h+'"><video muted loop playsinline preload="none" poster="p/'+c.id+'.jpg" data-src="v/'+c.id+'.mp4"></video></span>'+
+      '<span class="meta"><b>'+c.n+'</b><em>'+c.d+'</em></span><span class="hint">Open</span>';
+    b.addEventListener('click',function(){openVideo(c)});
+    grid.appendChild(b);
+    if(io) io.observe(b); else { var v=b.querySelector('video'); v.src=v.dataset.src; v.autoplay=true; }
+  });
+
+  // ticker
+  var words=['VHS','GLITCH','VISUAL','FOR SALE','DM @PASHAAAAFX'],t='';
+  for(var r=0;r<2;r++){
+    words.forEach(function(w,i){t+='<span'+(i%2?' class="o"':'')+'>'+w+'</span>';if(i===1)t+='<img src="i/walker.gif" alt="">';});
+    t+='<img src="i/walker.gif" alt="">';
+  }
+  var tr=document.getElementById('track');tr.innerHTML=t+t;
+
+  var dlg=document.getElementById('dlg'),dvid=document.getElementById('dvid'),dimg=document.getElementById('dimg');
+  function show(){ if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open',''); }
+  function openVideo(c){
+    document.getElementById('dname').textContent=c.n;
+    dimg.hidden=true;dimg.removeAttribute('src');dvid.hidden=false;
+    dvid.poster='p/'+c.id+'.jpg';dvid.src='v/'+c.id+'.mp4';
+    show();var p=dvid.play();if(p&&p.catch)p.catch(function(){});
+  }
+  function close(){dvid.pause();dvid.removeAttribute('src');dvid.load();if(dlg.close)dlg.close();else dlg.removeAttribute('open')}
+  document.getElementById('dclose').addEventListener('click',close);
+  dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
+  dlg.addEventListener('cancel',function(){dvid.pause()});
+
+  var tc=document.getElementById('tc'),t0=Date.now();
+  function pad(n){return (n<10?'0':'')+n}
+  setInterval(function(){
+    var s=(Date.now()-t0)/1000,f=Math.floor((s%1)*25);
+    tc.textContent=pad(Math.floor(s/3600))+':'+pad(Math.floor(s/60)%60)+':'+pad(Math.floor(s)%60)+':'+pad(f);
+  },80);
+
+  var toast=document.getElementById('toast');
+  document.getElementById('copy').addEventListener('click',function(){
+    function done(m){toast.textContent=m;setTimeout(function(){toast.textContent=''},2500)}
+    try{
+      navigator.clipboard.writeText('@pashaaaafx').then(function(){done('Copied')},function(){done('Select the username and copy it manually')});
+    }catch(e){done('Select the username and copy it manually')}
+  });
+})();
+</script>
+
+</body></html>
